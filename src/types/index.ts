@@ -11,7 +11,6 @@ export interface Question {
 export interface UserInfo {
   name: string;
   gender: 'male' | 'female' | 'other';
-  age: number;
 }
 
 export interface TestResult {

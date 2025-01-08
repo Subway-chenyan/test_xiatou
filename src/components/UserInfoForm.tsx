@@ -6,7 +6,6 @@ export const UserInfoForm: React.FC = () => {
   const [formData, setFormData] = useState<UserInfo>({
     name: '',
     gender: 'other',
-    age: 18
   });
   
   const { setUserInfo } = useTestStore();
@@ -43,19 +42,6 @@ export const UserInfoForm: React.FC = () => {
             <option value="female">女</option>
             <option value="other">其他</option>
           </select>
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-gray-700">年龄</label>
-          <input
-            type="number"
-            min="1"
-            max="120"
-            required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            value={formData.age}
-            onChange={(e) => setFormData({ ...formData, age: parseInt(e.target.value) })}
-          />
         </div>
         
         <button
