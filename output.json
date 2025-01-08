@@ -1,4 +1,4 @@
-export const questions = [
+[
     {
         "id": 1,
         "text": "是否因为某件事，让关系还可以的朋友忽然渐行渐远",
@@ -1115,57 +1115,4 @@ export const questions = [
             }
         ]
     }
-];
-
-export const calculateResult = (moralScore: number, actionScore: number, gender: string): string => {
-  const getMoralLevel = (score: number) => {
-    if (score <= -10) return 'low';
-    if (score >= 10) return 'high';
-    return 'mid';
-  };
-
-  const getActionLevel = (score: number) => {
-    if (score <= -10) return 'low';
-    if (score >= 10) return 'high';
-    return 'mid';
-  };
-
-  const moralLevel = getMoralLevel(moralScore);
-  const actionLevel = getActionLevel(actionScore);
-
-  if (moralLevel === 'low' && actionLevel === 'low') {
-    return '乐子人';
-  } else if (moralLevel === 'low' && actionLevel === 'mid') {
-    return gender === 'male' ? '下头男' : '下头女';
-  } else if (moralLevel === 'low' && actionLevel === 'high') {
-    return '搅屎棍';
-  } else if (moralLevel === 'mid' && actionLevel === 'low') {
-    return '观察者';
-  } else if (moralLevel === 'mid' && actionLevel === 'mid') {
-    return '正常人';
-  } else if (moralLevel === 'mid' && actionLevel === 'high') {
-    return '大妈';
-  } else if (moralLevel === 'high' && actionLevel === 'low') {
-    return '局外人';
-  } else if (moralLevel === 'high' && actionLevel === 'mid') {
-    return '圣母';
-  } else if (moralLevel === 'high' && actionLevel === 'high') {
-    return '正义伙伴';
-  }
-  return '正常人';
-};
-
-export const getResultDescription = (title: string): string => {
-  const descriptions: Record<string, string> = {
-    '下头男': '你可以很明确的分辨善恶道德，但是善良和道德在你眼中只是无趣的人生，与亲朋好友之间的缺德玩笑让你获得短暂的满足感，这是法律所不能指责你的部分。但是你也永远不会知道，你自认的玩笑，会让大家在背后对你的评价是好是坏。',
-    '下头女': '你可以很明确的分辨善恶道德，但是善良和道德在你眼中只是无趣的人生，与亲朋好友之间的缺德玩笑让你获得短暂的满足感，这是法律所不能指责你的部分。但是你也永远不会知道，你自认的玩笑，会让大家在背后对你的评价是好是坏。',
-    '观察者': '你习惯以高纬度生物视角看待事情，你觉得人类很有趣，宛如看一朵花一般，静静的看着它枯萎或者绽放。这世上的一切都是如此的虚无，人究竟为何。',
-    '搅屎棍': '你是流落人间的洛基，世人眼里的道德道理你烂熟于心，你喜欢戏剧，喜欢看每一段刺激的剧情，你所难过的是这些东西并不是你所操控的，所以，朋友是最好的工具，感情是最好的调味料，你所做的，是想取悦自己的内心，让它达到片刻的欢愉。',
-    '正常人': '他人眼里的正常人，一直坚守自己的本心，但是凡心又何尝没有一丝悸动。也许你向往着不一样的人生，你也想过如何改变，但往往简简单单平平淡淡才是幸福，你是个好人。',
-    '圣母': '你对自己又很高的道德洁癖，对很多事的看待往往以恻隐之心为主，你不喜欢看人间真实的悲剧，因为你无法改变他们的困境，久而久之，你的内心开始变的麻木，你不会过多的干涉他人的人生，你觉得万事因果皆为己铸。但是，天上真的不会冷吗。',
-    '乐子人': '你习惯以缺德的角度去看待事情的发展，虽然不沾染因果，但是你却期待着宛如电视剧一样的情况发生在身边朋友的身上。事情闹得越大，你的心会越躁动。诸君，我喜欢战争。',
-    '局外人': '你习惯站在事外，冷眼旁观人生中的各种戏剧性事件。你并非不关心他人，而是选择了一种抽离的态度。你喜欢观察，却不会轻易介入，因为你觉得任何干涉都会打破某种自然的平衡。你更倾向于成为旁观者，而非参与者。在人们眼里，你可能显得冷漠甚至无情，但你知道这不过是你与世界相处的方式。你相信，无论事情的走向如何，一切终会尘埃落定，而你，只需静静看着。',
-    '正义伙伴': '你是人群中的希望火炬，坚守着内心的善良与正义。你对于是非黑白有着明确的判断，甚至愿意为此站出来，哪怕是面对巨大的压力。你总是试图做出正确的选择，即使这可能让你显得过于理想化。朋友的困境、社会的不公，都会让你难以置身事外，因为你相信，哪怕只是一个小小的行动，都可能成为改变的开始。然而，过于执着于正义，有时会让你忽略灰色地带的复杂与人性的脆弱。你是那个愿意为正义仗剑而行的人，但也不得不承认，现实并不总是公平的。'
-  };
-  return descriptions[title] || '未知结果';
-};
+]
