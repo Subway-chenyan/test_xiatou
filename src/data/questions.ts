@@ -1119,8 +1119,8 @@ export const questions = [
 
 export const calculateResult = (moralScore: number, actionScore: number, gender: string): string => {
   const getMoralLevel = (score: number) => {
-    if (score <= -10) return 'low';
-    if (score >= 10) return 'high';
+    if (score <= -15) return 'low';
+    if (score >= 20) return 'high';
     return 'mid';
   };
 
